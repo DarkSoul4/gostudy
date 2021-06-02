@@ -18,6 +18,3 @@
 
 ​	   重启vscode，Ctrl+Shift+P，输入Go:Install/Update Tools，安装
 
-
-
-![000](C:/Users/wuj/Desktop/000.jpg)
