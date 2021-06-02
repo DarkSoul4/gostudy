@@ -21,5 +21,20 @@
 ## 二、helloworld
 
 1. 在当前目录下执行go build xxx.go，生成xxx.exe
+
 2. 当前目录下执行xxx.exe
+
+3. 快捷键配置：Ctrl+Shift+P，配置用户代码片段，选go
+
+   go.json添加：
+
+   ```js
+   “这里放个名字”:{
+       "prefix": "这个是快捷键",
+       "body": "这里是按快捷键插入的代码片段",
+       "description": "这里放提示信息的描述"
+   }
+   ```
+
+   
 
