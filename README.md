@@ -18,3 +18,8 @@
 
 ​	   重启vscode，Ctrl+Shift+P，输入Go:Install/Update Tools，安装
 
+## 二、helloworld
+
+1. 在当前目录下执行go build xxx.go，生成xxx.exe
+2. 当前目录下执行xxx.exe
+
