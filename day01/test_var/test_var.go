@@ -33,5 +33,14 @@ func main() {
 	x, _ := foo()
 	_, y := foo()
 	fmt.Println(x,y)
+	// 八进制、十六进制
+	var b1 = 101
+	b2 := 077
+	b3 := 0xff
+	fmt.Println(b1, b2,b3)
+	//查看变量类型
+	fmt.Printf("%T\n", b3)
+	b3 = b1
+	fmt.Println(b3)
 	
 }
