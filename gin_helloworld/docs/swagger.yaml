@@ -1,0 +1,150 @@
+basePath: /api/v1
+definitions:
+  main.Registjson:
+    properties:
+      phone:
+        type: string
+      uid:
+        type: string
+    type: object
+  main.Respose:
+    properties:
+      code:
+        type: integer
+      data:
+        type: object
+      message:
+        type: string
+    type: object
+host: 127.0.0.1:8090
+info:
+  contact: {}
+  description: This is a sample server celler server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /info:
+    get:
+      consumes:
+      - multipart/form-data
+      description: 各种get参数
+      parameters:
+      - description: 测试.ShouldBindQuery
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: 测试.ShouldBindQuery
+        in: query
+        name: pwd
+        required: true
+        type: string
+      - description: 测试.Param
+        in: query
+        name: param2
+        required: true
+        type: string
+      - description: 测试.Query
+        in: query
+        name: param3
+        required: true
+        type: string
+      - description: 测试.DefaultQuery
+        in: query
+        name: param4
+        required: true
+        type: string
+      - description: 测试.GetQuery
+        in: query
+        name: param5
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "ok"}'
+          schema:
+            type: string
+        "500":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: 测试query参数获取
+      tags:
+      - 测试
+  /jsont:
+    post:
+      consumes:
+      - application/json
+      description: 各种get参数
+      parameters:
+      - description: 测试.BindJSON
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/main.Registjson'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Respose'
+        "500":
+          description: '{"msg": "error"}'
+          schema:
+            type: string
+      summary: 测试json参数获取
+      tags:
+      - 测试
+  /regin:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 各种get参数
+      parameters:
+      - description: 测试.ShouldBind
+        in: formData
+        name: uid
+        required: true
+        type: string
+      - description: 测试.ShouldBind
+        in: formData
+        name: phone
+        required: true
+        type: string
+      - description: 测试.PostForm
+        in: formData
+        name: param2
+        required: true
+        type: string
+      - description: 测试.DefaultPostForm
+        in: formData
+        name: param3
+        required: true
+        type: string
+      - description: 测试.GetPostForm
+        in: formData
+        name: param4
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "500":
+          description: '{"msg": "ERROR"}'
+          schema:
+            type: string
+      summary: 测试form参数获取
+      tags:
+      - 测试
+swagger: "2.0"
